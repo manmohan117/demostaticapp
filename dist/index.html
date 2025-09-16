@@ -1,32 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8" />
+  <title>Number Guessing Game</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width:600px; margin:40px auto; padding:0 16px; }
+    input[type="number"]{ width:100px; }
+    button{ margin-left:8px; }
+    .log{ margin-top:20px; background:#f6f6f6; padding:12px; border-radius:6px; max-height:200px; overflow:auto; font-family:monospace; }
+  </style>
 </head>
-
 <body>
+  <h1>Number Guessing Game</h1>
+  <p>I'm thinking of a number between 1 and 100. Try to guess it!</p>
 
+  <div>
+    <input id="guessInput" type="number" min="1" max="100" placeholder="Your guess" />
+    <button id="guessBtn">Guess</button>
+    <button id="newBtn">New Game</button>
+  </div>
 
-    <h1 class="title">Number guessing game</h1>
-     <p class="discription">Enter a number if your guess is correct you win!!!!
-        <br>
-        else you lose!!!
-     </p>
-     <input id="number-input-js" class="number-input" type="number" size="10">
-     <button onclick="checkGuess();">Guess!!</button>
-     <button onclick="startGame();">Reset Game</button>
-     <p id="turn-js" class="turn"></p>
-     <p id="result-js" class="result"></p>
-     <h3>Guess count: </h3>
-     <p id="tries-js" class="result"></p>
+  <p id="feedback" aria-live="polite"></p>
 
-    <script src="js/script.js"></script>
+  <div class="log">
+    <strong>Telemetry log (local):</strong>
+    <div id="telemetry"></div>
+  </div>
 
-
+  <script src="app.js"></script>
 </body>
 </html>
